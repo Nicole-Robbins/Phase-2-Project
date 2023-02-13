@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-function Nooks({inventoryList, setYourInventory}){
-    const [purchasedItem, setPurchaseItem] = useState('');
+function Nooks({inventoryList}){
+    const [formData, setFormData] = useState({name: ""});
     
     const itemList = 
      inventoryList.map((item) => (
@@ -20,21 +20,23 @@ function Nooks({inventoryList, setYourInventory}){
         ));
 
     function handleChange(event){
-        setPurchaseItem(event.target.value);  
+        setFormData({
+            ...formData,
+            [event.target.name]: event.target.value,
+        });  
     }    
 
-    function handleForm(event){
+    function handleSubmit(event){
         event.preventDefault();
-        const newItem = {name: purchasedItem};
         fetch("http://localhost:3000/yourinventory", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(newItem),
+            body: JSON.stringify({
+                item: formData
+            }),
         })
-        .then(r => r.json())
-        .then(newItem => setYourInventory(newItem))
     }
 
 
@@ -42,10 +44,10 @@ function Nooks({inventoryList, setYourInventory}){
         <div className="Nooks">
             <h1>Welcome to Nooks Cranny!</h1>
             <h2>Browse our offerings to add to your Inventory.</h2>
-            <form onSubmit={handleForm}>
+            <form onSubmit={handleSubmit}>
                 <label>
                 Buy Something!
-                    <select onChange={handleChange} name="buy" className="dropdown">
+                    <select onChange={handleChange} name="name" className="dropdown" value={formData}>
                         {inventoryDropdown}
                     </select>
                 </label>

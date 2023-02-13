@@ -40,7 +40,7 @@ function App() {
                     <Villagers villagerInfo={villagers}/>
                 </Route>
                 <Route path="/nooks">
-                    <Nooks inventoryList={items} setYourInventory={setYourInventory}/>
+                    <Nooks inventoryList={items}/>
                 </Route>
                 <Route path="/inventory">
                     <Inventory yourInventory={yourInventory}/>
