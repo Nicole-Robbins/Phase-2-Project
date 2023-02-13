@@ -2,7 +2,7 @@ import React from "react";
 
 function Nooks(){
     return(
-        <div id="home">
+        <div className="Nooks">
             <h1>Welcome to My Island!</h1>
         </div>
     )

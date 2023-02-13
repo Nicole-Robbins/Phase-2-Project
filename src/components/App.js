@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import '../App.css';
 import NavBar from "./NavBar";
@@ -8,12 +8,23 @@ import Nooks from "./Nooks";
 
 
 function App() {
+  const [villagers,setVillagers] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:3000/villagers")
+        .then((res) => res.json())
+        .then((data) => setVillagers(data))
+    }, []);
+
+    console.log(villagers)
+  
+  
   return (
     <div className="App">
             <NavBar />
             <Switch>
                 <Route path="/villagers">
-                    <Villagers />
+                    <Villagers villagerInfo={villagers}/>
                 </Route>
                 <Route path="/nooks">
                     <Nooks />
