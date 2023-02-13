@@ -11,6 +11,7 @@ function Villagers({villagerInfo}){
                 <div>
                     <li key={info.type}>{info.type}</li>
                     <li key={info.birthday}>{info.birthday}</li>
+                    <br></br>
                     </div>
                 ))}</ul>
             </div>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Nooks({inventoryList}){
-    
+    const [purchasedItem, setPurchaseItem] = useState([]);
+    const [choose, setChoose] = useState("Choose an item!");
+
     const itemList = 
      inventoryList.map((item) => (
         <div key={item.name} className="card">
@@ -12,22 +14,33 @@ function Nooks({inventoryList}){
             </ul>
         </div>
     ))
+
+    const inventoryDropdown =
+        inventoryList.map((item) => (
+            <option key={item.cost} value={choose}>{item.name}</option>
+        ));
+
+
+    function handleForm(event){
+        event.preventDefault();
+        setPurchaseItem(event.target.value);
+    }
+
+
     return(
         <div className="Nooks">
             <h1>Welcome to Nooks Cranny!</h1>
             <h2>Browse our offerings to add to your Inventory.</h2>
-            {itemList}
-            <form>
+            <form onSubmit={handleForm}>
                 <label>
                 Buy Something!
-                    <input
-                        type="text"
-                        name="prompt"
-                        value={formData.prompt}
-                        onChange={handleChange}
-                    />
+                    <select onChange={(e) => setChoose(e.target.value)} name="buy" className="dropdown">
+                        {inventoryDropdown}
+                    </select>
                 </label>
             </form>
+            <br></br>
+            {itemList}
         </div>
     )
 }
