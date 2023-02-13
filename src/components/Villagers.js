@@ -2,17 +2,20 @@ import React from "react";
 
 function Villagers({villagerInfo}){
     
-    const villagerCard = (() => {
-        villagerInfo.map((villager) => 
-            <div key={villager.name}>
-                {villager.image}
+    const villagerCard =
+        villagerInfo.map((villager) => (
+            <div key={villager.name} className="card">
+                <img src={villager.image} alt={villager.name}/>
                 <h2>{villager.name}</h2>
                 <ul>{villager.about.map((info) => (
-                <li key={info.type}>{info.birthday}{info.type}</li>
+                <div>
+                    <li key={info.type}>{info.type}</li>
+                    <li key={info.birthday}>{info.birthday}</li>
+                    </div>
                 ))}</ul>
             </div>
-        )
-    });
+            )
+        );
 
     return(
         <div className="Villagers">

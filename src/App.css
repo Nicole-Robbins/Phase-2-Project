@@ -35,6 +35,13 @@
   color: White;
 }
 
+.card {
+  margin: 0;
+  padding: 25px;
+  background-color: rgb(247, 239, 229);
+  height: auto;
+}
+
 .App-link {
   color: #61dafb;
 }
