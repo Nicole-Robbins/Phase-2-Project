@@ -1,3 +1,37 @@
+# My Island App
+
+## About the app
+
+- Visit my Island to see who is here and buy things for your inventory.
+
+## The Goal
+
+Managing tasks can be daunting, especially when it seems like it's an endless list of impossible to-dos. The goal of the Task Helper App is to sort daily tasks into three categories based on how much time they are estimated to take. The three categories of "quick-ticks", "Tasks", and "Projects" are designed to optimize your time management to help you "break-up" with the lengthy, stressful to-do list. 
+
+## What are the secret ingredients?
+
+The Task Help App is an HTML/CSS/JS frontend that interacts with a db.json file using a json-server that contains a list of common daily household tasks.
+
+### How to use the app
+
+To use the Task Helper App, select a task from the dropdown list to add to your daily task categories. The task will appear in either the category "quick-ticks" which take 5 minutes or less, "tasks" which take between 5-15 minutes, or "Projects" which take 15 minutes or more. To delete a task, simply click the "x" button.
+
+ Use the categories to make sure you're fitting each task into your schedule as realistically and optimally as possible. If you only have 5 minutes right now, knock-out a "quick-tick" and save the Projects for when you have more free time.
+
+#### Contributions
+
+For this project, I referenced these articles and videos:
+https://www.makeareadme.com/
+https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
+https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form
+https://www.freecodecamp.org/news/html-select-tag-how-to-make-a-dropdown-menu-or-combo-list/
+https://www.w3schools.com/howto/howto_js_todolist.asp
+Evans Wang's lecture "js task lister lite 051319" https://youtu.be/0USCqgDzVHA
+Flatiron's Task Lister Lite (specifically for css inspiration) https://learn-co-curriculum.github.io/js-task-lister-lite/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,57 +48,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
