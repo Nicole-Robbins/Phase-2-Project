@@ -11,14 +11,14 @@ function App() {
     <div className="App">
             <NavBar />
             <Switch>
-                <Route path="/home">
-                    <Home />
-                </Route>
                 <Route path="/villagers">
                     <Villagers />
                 </Route>
                 <Route path="/nooks">
                     <Nooks />
+                </Route>
+                <Route exact path="/home">
+                    <Home />
                 </Route>
             </Switch>
     </div>
