@@ -11,6 +11,7 @@ import Inventory from './Inventory';
 function App() {
   const [villagers,setVillagers] = useState([]);
   const [items, setItems] = useState([]);
+  const [yourInventory, setYourInventory] = useState([]);
 
   useEffect(() => {
     fetch(" http://localhost:3000/villagers")
@@ -23,6 +24,12 @@ function App() {
           .then((res) => res.json())
           .then((data) => setItems(data))
       }, []);
+    
+      useEffect(() => {
+        fetch("http://localhost:3000/your inventory")
+            .then((res) => res.json())
+            .then((data) => setYourInventory(data))
+        }, []);  
   
   
   return (
@@ -36,7 +43,7 @@ function App() {
                     <Nooks inventoryList={items}/>
                 </Route>
                 <Route path="/inventory">
-                    <Inventory />
+                    <Inventory yourInventory={yourInventory}/>
                 </Route>
                 <Route exact path="/home">
                     <Home />

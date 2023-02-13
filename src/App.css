@@ -13,13 +13,24 @@
   color: white;
 }
 
-.Home, .Villagers, .Nooks { 
+.Home { 
   
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: White;
+}
+
+.Home, .Villagers, .Nooks, .Inventory { 
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
   font-size: calc(10px + 2vmin);
   color: White;
 }
