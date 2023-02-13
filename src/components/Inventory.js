@@ -1,7 +1,9 @@
 import React from "react";
 
 function Inventory({yourInventory}){
-     return(
+   
+    
+    return(
         <div className="Inventory">
             <h1>Your Inventory</h1>
             {yourInventory}

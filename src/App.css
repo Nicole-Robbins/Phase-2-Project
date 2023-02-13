@@ -13,7 +13,7 @@
   color: white;
 }
 
-.Home { 
+.Home, .Inventory { 
   
   min-height: 100vh;
   display: flex;
@@ -24,7 +24,7 @@
   color: White;
 }
 
-.Home, .Villagers, .Nooks, .Inventory { 
+.Villagers, .Nooks { 
   
   min-height: 100vh;
   display: flex;

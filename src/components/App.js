@@ -24,9 +24,9 @@ function App() {
           .then((res) => res.json())
           .then((data) => setItems(data))
       }, []);
-    
+     
       useEffect(() => {
-        fetch("http://localhost:3000/your inventory")
+        fetch("http://localhost:3000/yourinventory")
             .then((res) => res.json())
             .then((data) => setYourInventory(data))
         }, []);  
@@ -40,7 +40,7 @@ function App() {
                     <Villagers villagerInfo={villagers}/>
                 </Route>
                 <Route path="/nooks">
-                    <Nooks inventoryList={items}/>
+                    <Nooks inventoryList={items} setYourInventory={setYourInventory}/>
                 </Route>
                 <Route path="/inventory">
                     <Inventory yourInventory={yourInventory}/>
