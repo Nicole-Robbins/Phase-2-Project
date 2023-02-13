@@ -19,17 +19,17 @@ function App() {
         .then((data) => setVillagers(data))
     }, []);
 
-    useEffect(() => {
-      fetch("http://localhost:3000/inventory")
-          .then((res) => res.json())
-          .then((data) => setItems(data))
-      }, []);
+  useEffect(() => {
+    fetch("http://localhost:3000/inventory")
+        .then((res) => res.json())
+        .then((data) => setItems(data))
+    }, []);
      
-      useEffect(() => {
-        fetch("http://localhost:3000/yourinventory")
-            .then((res) => res.json())
-            .then((data) => setYourInventory(data))
-        }, []);  
+    useEffect(() => {
+      fetch("http://localhost:3000/yourinventory")
+          .then((res) => res.json())
+          .then((data) => setYourInventory(data))
+      }, []);  
   
   
   return (
