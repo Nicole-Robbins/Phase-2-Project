@@ -1,0 +1,39 @@
+{
+    "villagers": [
+      {
+        "id": 1,
+        "name": "Marshal",
+        "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/da/Marshal_NH.png/revision/latest?cb=20200317171946",
+        "birthday": "September 29th",
+        "type": "Squirrel" 
+      },
+      {
+        "id": 2,
+        "name": "Raymond",
+        "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/a4/Raymond_NH_1.png/revision/latest?cb=20200908002252",
+        "birthday": "October 1st",
+        "type": "Cat"
+      },
+      {
+        "id": 3,
+        "name": "Mallary",
+        "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/28/Mallary_NH.png/revision/latest?cb=20200802142819",
+        "birthday": "November 17th",
+        "type": "Duck"
+      },
+      {
+        "id": 4,
+        "name": "Stitches",
+        "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/56/Stitches_NH.png/revision/latest?cb=20200413171903",
+        "birthday": "February 10th",
+        "type": "Cub"
+      },
+      {
+        "id": 5,
+        "name": "Diva",
+        "image": "https://static.wikia.nocookie.net/animalcrossing/images/4/44/Diva_NH.png/revision/latest?cb=20200802144827",
+        "birthday": "October 2nd",
+        "type": "Frog"
+      }
+    ]
+  }
