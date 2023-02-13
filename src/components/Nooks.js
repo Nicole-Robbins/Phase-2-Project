@@ -44,12 +44,13 @@ function Nooks({inventoryList}){
         <div className="Nooks">
             <h1>Welcome to Nooks Cranny!</h1>
             <h2>Browse our offerings to add to your Inventory.</h2>
-            <form onSubmit={handleSubmit}>
+            <form method="post" onSubmit={handleSubmit}>
                 <label>
                 Buy Something!
                     <select onChange={handleChange} name="name" className="dropdown" value={formData}>
                         {inventoryDropdown}
                     </select>
+                    <button type="submit">Purchase</button>
                 </label>
             </form>
             <br></br>

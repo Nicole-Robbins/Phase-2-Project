@@ -4,8 +4,10 @@ function Villagers({villagerInfo}){
     
     const villagerCard =
         villagerInfo.map((villager) => (
-            <div key={villager.name} className="card">
-                <img src={villager.image} alt={villager.name}/>
+            <div key={villager.id} className="card">
+                <img src={villager.image} alt={villager.name} style={{
+            resizeMode: 'contain',
+          }}/>
                 <h2>{villager.name}</h2>
                 <ul>{villager.about.map((info) => (
                 <div>
