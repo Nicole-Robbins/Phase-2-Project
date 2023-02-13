@@ -13,7 +13,7 @@
   color: white;
 }
 
-.Home { 
+.Home, .Villagers, .Nooks { 
   
   min-height: 100vh;
   display: flex;
@@ -24,23 +24,16 @@
   color: White;
 }
 
-.Villagers { 
-  
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: White;
-}
 
 .card {
   margin: 0;
   padding: 25px;
   background-color: rgb(247, 239, 229);
   height: auto;
+  color: black;
 }
+
+
 
 .App-link {
   color: #61dafb;
