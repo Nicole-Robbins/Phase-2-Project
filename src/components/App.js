@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Villagers from "./Villagers";
 import Nooks from "./Nooks";
+import Inventory from './Inventory';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
                 </Route>
                 <Route path="/nooks">
                     <Nooks inventoryList={items}/>
+                </Route>
+                <Route path="/inventory">
+                    <Inventory />
                 </Route>
                 <Route exact path="/home">
                     <Home />
