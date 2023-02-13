@@ -1,10 +1,13 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 function NavBar(){
     return(
-        <div id="home">
-            <h1>Welcome to My Island!</h1>
-        </div>
+        <nav>
+            <NavLink exact to="/home">Home</NavLink>
+            <NavLink exact to="/villagers">Villagers</NavLink>
+            <NavLink exact to="nooks">Nooks</NavLink>
+        </nav>
     )
 }
 
