@@ -37,14 +37,18 @@
 
 
 .card {
-  margin: 100;
+  margin: 100px;
   padding: 25px;
   background-color: rgb(247, 239, 229);
   height: auto;
   color: black;
 }
 
-
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 .App-link {
   color: #61dafb;

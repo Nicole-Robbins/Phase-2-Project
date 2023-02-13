@@ -9,8 +9,8 @@ function Villagers({villagerInfo}){
                 <h2>{villager.name}</h2>
                 <ul>{villager.about.map((info) => (
                 <div>
-                    <li key={info.type}>{info.type}</li>
-                    <li key={info.birthday}>{info.birthday}</li>
+                    <li key={info.type}>Type: {info.type}</li>
+                    <li key={info.birthday}>Birthday: {info.birthday}</li>
                     <br></br>
                     </div>
                 ))}</ul>
