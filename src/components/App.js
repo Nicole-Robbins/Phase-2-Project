@@ -8,15 +8,20 @@ import Nooks from "./Nooks";
 
 
 function App() {
-  const [villagers,setVillagers] = useState([])
+  const [villagers,setVillagers] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/villagers")
+    fetch(" http://localhost:3000/villagers")
         .then((res) => res.json())
         .then((data) => setVillagers(data))
     }, []);
 
-    console.log(villagers)
+    useEffect(() => {
+      fetch("http://localhost:3000/inventory")
+          .then((res) => res.json())
+          .then((data) => setItems(data))
+      }, []);
   
   
   return (
@@ -27,7 +32,7 @@ function App() {
                     <Villagers villagerInfo={villagers}/>
                 </Route>
                 <Route path="/nooks">
-                    <Nooks />
+                    <Nooks inventoryList={items}/>
                 </Route>
                 <Route exact path="/home">
                     <Home />

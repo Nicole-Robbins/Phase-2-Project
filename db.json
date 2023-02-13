@@ -45,5 +45,57 @@
           "type": "Frog"
         }]
       }
-    ]
+    ],
+
+    "inventory": [
+      {
+        "id": 1,
+        "name": "Axe",
+        "cost": 200,
+        "type": "tool"
+      },
+      {
+        "id": 2,
+        "name": "Shovel",
+        "cost": 100,
+        "type": "tool"
+      },
+      {
+        "id": 3,
+        "name": "Apple",
+        "cost": 50,
+        "type": "fruit"
+      },
+      {
+        "id": 4,
+        "name": "Coconut",
+        "cost": 10,
+        "type": "fruit"
+      },
+      {
+        "id": 5,
+        "name": "Ladder Recipe",
+        "cost": 199,
+        "type": "Recipe"
+      },
+      {
+        "id": 6,
+        "name": "Orange Windflower Seeds",
+        "cost": 240,
+        "type": "seeds"
+      },
+      {
+        "id": 7,
+        "name": "Cherrywood Floor",
+        "cost": 1500,
+        "type": "flooring"
+      },
+      {
+        "id": 8,
+        "name": "Fairy Wallpaper",
+        "cost": 3000,
+        "type": "wall"
+      }
+
+      ] 
   }
