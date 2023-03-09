@@ -9,43 +9,55 @@ import Inventory from './Inventory';
 
 
 function App() {
-  const [villagers,setVillagers] = useState([]);
   const [items, setItems] = useState([]);
   const [yourInventory, setYourInventory] = useState([]);
-
-  useEffect(() => {
-    fetch(" http://localhost:3000/villagers")
-        .then((res) => res.json())
-        .then((data) => setVillagers(data))
-    }, []);
+  const [formData, setFormData] = useState({name: ""});
 
   useEffect(() => {
     fetch("http://localhost:3000/inventory")
         .then((res) => res.json())
         .then((data) => setItems(data))
     }, []);
-     
+
     useEffect(() => {
-      fetch("http://localhost:3000/yourinventory")
-          .then((res) => res.json())
-          .then((data) => setYourInventory(data))
-      }, []);  
-  
+        fetch("http://localhost:3000/yourinventory")
+            .then((res) => res.json())
+            .then((data) => setYourInventory(data))
+        }, [yourInventory]);
+
+    function updateInventory(data){
+        setYourInventory(...yourInventory, data)
+    }
+    
+    function handleSubmit(event){
+        event.preventDefault();
+        fetch("http://localhost:3000/yourinventory", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(
+                formData
+            ),
+        })
+        .then (r => r.json())
+        .then (data => updateInventory(data))
+    }
   
   return (
     <div className="App">
             <NavBar />
             <Switch>
-                <Route path="/villagers">
-                    <Villagers villagerInfo={villagers}/>
+                <Route exact path="/villagers">
+                    <Villagers />
                 </Route>
-                <Route path="/nooks">
-                    <Nooks inventoryList={items}/>
+                <Route exact path="/nooks">
+                    <Nooks inventoryList={items} handleSubmit={handleSubmit} formData={formData} setFormData={setFormData}/>
                 </Route>
-                <Route path="/inventory">
+                <Route exact path="/inventory">
                     <Inventory yourInventory={yourInventory}/>
                 </Route>
-                <Route exact path="/home">
+                <Route path="/">
                     <Home />
                 </Route>
             </Switch>

@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
-function Nooks({inventoryList}){
-    const [formData, setFormData] = useState({name: ""});
+function Nooks({inventoryList, handleSubmit, formData, setFormData}){
     
     const itemList = 
      inventoryList.map((item) => (
@@ -26,19 +25,6 @@ function Nooks({inventoryList}){
         });  
     }    
 
-    function handleSubmit(event){
-        event.preventDefault();
-        fetch("http://localhost:3000/yourinventory", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                item: formData
-            }),
-        })
-    }
-
 
     return(
         <div className="Nooks">
@@ -47,7 +33,7 @@ function Nooks({inventoryList}){
             <form method="post" onSubmit={handleSubmit}>
                 <label>
                 Buy Something!
-                    <select onChange={handleChange} name="name" className="dropdown" value={formData}>
+                    <select onChange={handleChange} name="name" className="dropdown" defaultValue="Choose an Item" >
                         {inventoryDropdown}
                     </select>
                     <button type="submit">Purchase</button>

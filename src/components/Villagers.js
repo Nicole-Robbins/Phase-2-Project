@@ -1,21 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-function Villagers({villagerInfo}){
-    
+function Villagers(){
+    const [villagers,setVillagers] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3000/villagers")
+            .then((res) => res.json())
+            .then((data) => setVillagers(data))
+        }, []);
+   
     const villagerCard =
-        villagerInfo.map((villager) => (
+        villagers.map((villager) => (
             <div key={villager.id} className="card">
                 <img src={villager.image} alt={villager.name} style={{
             resizeMode: 'contain',
           }}/>
                 <h2>{villager.name}</h2>
-                <ul>{villager.about.map((info) => (
-                <div>
-                    <li key={info.type}>Type: {info.type}</li>
-                    <li key={info.birthday}>Birthday: {info.birthday}</li>
-                    <br></br>
-                    </div>
-                ))}</ul>
+                <ul>
+                    <li>Type: {villager.about.type}</li>
+                    <li>Birthday: {villager.about.birthday}</li>
+                </ul>
             </div>
             )
         );
