@@ -98,28 +98,36 @@
   ],
   "yourinventory": [
     {
-      "name": "Shovel",
+      "name": "Coconut",
       "id": 1
     },
     {
-      "name": "Shovel",
+      "name": "Cherrywood Floor",
       "id": 2
     },
     {
-      "name": "Apple",
+      "name": "Cherrywood Floor",
       "id": 3
     },
     {
-      "name": "Fairy Wallpaper",
+      "name": "Shovel",
       "id": 4
     },
     {
-      "name": "Ladder Recipe",
+      "name": "Apple",
       "id": 5
     },
     {
-      "name": "Orange Windflower Seeds",
+      "name": "Ladder Recipe",
       "id": 6
+    },
+    {
+      "name": "Ladder Recipe",
+      "id": 7
+    },
+    {
+      "name": "Cherrywood Floor",
+      "id": 8
     }
   ]
 }

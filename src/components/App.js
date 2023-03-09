@@ -17,16 +17,13 @@ function App() {
     fetch("http://localhost:3000/inventory")
         .then((res) => res.json())
         .then((data) => setItems(data))
+        fetch("http://localhost:3000/yourinventory")
+        .then((res) => res.json())
+        .then((data) => setYourInventory(data))
     }, []);
 
-    useEffect(() => {
-        fetch("http://localhost:3000/yourinventory")
-            .then((res) => res.json())
-            .then((data) => setYourInventory(data))
-        }, [yourInventory]);
-
     function updateInventory(data){
-        setYourInventory(...yourInventory, data)
+        setYourInventory([...yourInventory, data])
     }
     
     function handleSubmit(event){
